@@ -1,0 +1,138 @@
+*{ box-sizing: border-box;}
+
+@font-face {
+font-family: "CarlaSansLight";
+src: url("../fonts/CarlaSansLight.ttf") format("truetype");
+font-style: Light;
+font-weight: Light;
+}
+
+p{ font-family: 'CarlaSansLight'; }
+
+.section1 {
+display: flex;
+width: 100%;
+}
+
+.btn {
+margin: 30px;
+width: 400px;
+height: 75px;
+border-radius: 5px;
+background: #5703c6;
+color: aliceblue;
+letter-spacing: 3px;
+text-align: center;
+line-height: 75px;
+font-weight: bold;
+transition: all 0.5s ease-out;
+}
+
+.btn:hover {
+background: rgb(29, 0, 78);
+transition: all 0.5s ease-out;
+}
+
+.container {
+background: aliceblue;
+height: 100px;
+width: 400px;
+overflow: hidden;
+position: relative;
+margin: 30px;
+border-radius: 5px;
+}
+
+.row {
+width: 1000px;
+height: 100px;
+vertical-align: middle;/* ветикальное выравнивание */
+position: absolute;
+overflow: hidden;
+white-space: nowrap;/* текст не переносится */
+animation: lin 10s linear infinite;
+}
+
+@keyframes lin {
+0% {left: 100%;}
+100% {left: -123%}
+}
+
+.btn:hover ~ .container .row { /* триггерная анимация */
+animation-play-state: paused;
+transition: all 0.5s ease-out;
+}
+
+.clock {
+width: 300px;
+height: 100px;
+position: relative;
+margin: 30px;
+border: 1px solid lawngreen; /* solid это непрерывная обводка */
+}
+
+.cl-el {
+width: 40px;
+height: 100%;
+display: inline-block;
+background: lightsteelblue;
+color: black;
+border-radius: 2px;
+overflow: hidden;
+position: relative;
+}
+
+.cl-ed {
+height: 100%;
+display: inline-block;/* элементы стоят рядом друг с другом */
+vertical-align: top;
+font-size: 50px;
+padding-top: 20px;
+font-weight: bold;
+}
+
+.mn{
+width: 100%;
+font-size: 50px;
+text-align: center;
+line-height: 100px;
+position: absolute;
+top: 0;
+}
+
+.sec-e {
+animation: second 10s linear infinite;
+}
+
+@keyframes second {
+0% {top: 0px;}
+100% {top: -1000%;}
+}
+
+.sec-d {
+animation: dessec 60s steps(6) infinite;
+}
+
+@keyframes dessec {
+0% {top: 0px}
+100% {top: -600%;}
+}
+
+.min-e {
+animation: kreker 600s steps(10) infinite;
+}
+
+@keyframes kreker {
+0% {top: 0px}
+100% {top: -1000%;}
+}
+
+.min-e {
+animation: prechenie 3600s steps(6) infinite;
+}
+
+@keyframes prechenie {
+0%{top: 0px;}
+100% {top: -600%;}
+}
+
